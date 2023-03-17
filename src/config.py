@@ -46,9 +46,9 @@ class Config:
         with open(filename, "w") as f:
             data = {
                 "settings": {
-                    "language": "ru",
-                    "currency": "RUB",
-                    "currency_symbol": "₽",
+                    "language": "en",
+                    "currency": "USD",
+                    "currency_symbol": "$",
                     "debug": True,
                 },
                 "delivery": {
@@ -63,23 +63,23 @@ class Config:
                 },
                 "payment_methods": {
                     "cash": {
-                        "title": "Наличными",
+                        "title": "Cash",
                         "enabled": True,
                     },
                     "manager": {
-                        "title": "Оплата после связи с менеджером",
+                        "title": "Payment after contacting the manager",
                         "enabled": True,
                     },
                     "telegram_api": {
-                        "title": "Оплата через Telegram",
+                        "title": "Payment via Telegram",
                         "enabled": False,
                     },
                   },
                 "info": {
-                    "greeting": "Приветствуем в нашем магазине!",
-                    "contacts": "Телефон: +7 (999) 999-99-99\nАдрес: г. Москва, ул. Ленина, д. 1",
-                    "refund_policy": "Политика возврата",
-                    "item_template": "Название: %n\nКатегория: %c\nЦена: %p\n\nОписание: %d",
+                    "greeting": "Welcome to our store!",
+                    "contacts": "Phone: +7 (999) 999-99-99\nAddress: Moscow, Lenin street, 1",
+                    "refund_policy": "Refund Policy",
+                    "item_template": "Name: %n\nCategory: %c\nPrice: %p\n\nDescription: %d",
                 },
             }
             json.dump(data, f, indent=2)
