@@ -47,7 +47,8 @@ async def welcome(message: types.Message) -> None:
     await users.create_if_not_exist(message.chat.id, message.from_user.username)
     user = users.User(message.chat.id)
 
-    user.is_admin = 1 if user.id==ADMIN_ID else 0
+    if user.id == ADMIN_ID:
+        user._update(field="is_admin",value=1)
 
     markup = markups.main
     if await user.is_admin:
