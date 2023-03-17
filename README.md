@@ -90,12 +90,12 @@ sudo emerge -av dev-lang/python:3.10 dev-python/pip
 #### Poetry
 Linux/MacOS/Windows(WSL):
 ```bash
-curl -sSL https://install.python-poetry.org | python3-
+curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 Windows Powershell:
 ```powershell
-(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py-
+(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 ```
 
 ### Bot installation
