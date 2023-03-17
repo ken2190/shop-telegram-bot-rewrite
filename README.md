@@ -109,7 +109,7 @@ cd shop-telegram-bot
 #### Create .env file
 Linux/Macos:
 ```bash
-touch.env
+touch .env
 echo "TOKEN=token" >> .env
 ```
 
