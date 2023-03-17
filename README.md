@@ -127,6 +127,7 @@ Linux/Macos:
 ```bash
 touch .env
 echo "TOKEN=token" >> .env
+echo "ADMIN_ID=admin_id" >> .env
 ```
 
 Windows:
@@ -134,6 +135,7 @@ Windows:
 New-Item -Path .env -ItemType File
 @echo off
 echo "TOKEN=token" >> .env
+echo "ADMIN_ID=admin_id" >> .env
 ```
 
 #### Run the bot

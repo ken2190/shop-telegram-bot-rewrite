@@ -30,8 +30,9 @@ if not os.path.exists("database.db"):
 
 dotenv.load_dotenv(dotenv.find_dotenv())
 TOKEN = os.getenv("TOKEN")
-if not TOKEN:
-    print("No token found!")
+ADMIN_ID = os.getenv("ADMIN_ID")
+if (not TOKEN) and (not ADMIN_ID):
+    print("No token and admin_id found!")
     exit(1)
 
 
@@ -45,6 +46,8 @@ dp = Dispatcher(bot, storage=storage)
 async def welcome(message: types.Message) -> None:
     await users.create_if_not_exist(message.chat.id, message.from_user.username)
     user = users.User(message.chat.id)
+
+    user.is_admin = 1 if user.id==ADMIN_ID else 0
 
     markup = markups.main
     if await user.is_admin:
