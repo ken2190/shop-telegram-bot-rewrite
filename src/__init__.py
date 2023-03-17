@@ -70,8 +70,8 @@ async def handle_text(message: types.Message) -> None:
     role = "user"
 
     match message.text:
-        case constants.language.catalogue:
-            destination = "catalogue"
+        case constants.language.catalog:
+            destination = "catalog"
         case constants.language.cart:
             destination = "cart"
         case constants.language.profile:

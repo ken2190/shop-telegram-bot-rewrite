@@ -8,7 +8,7 @@ import time
 
 
 async def execute(callback_query: types.CallbackQuery, user: models.users.User, data: dict, message=None) -> None:
-    text = constants.language.catalogue
+    text = constants.language.catalog
 
     categories = await models.categories.get_main_categories()
     names = await asyncio.gather(*[category.name for category in categories])

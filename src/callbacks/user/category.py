@@ -19,7 +19,7 @@ async def execute(callback_query: types.CallbackQuery, user: models.users.User, 
     if parent_id:
         markup.append((constants.language.back, f'{{"r":"user","cid":{parent_id}}}category'))
     else:
-        markup.append((constants.language.back, f'{constants.JSON_USER}catalogue'))
+        markup.append((constants.language.back, f'{constants.JSON_USER}catalog'))
 
     text=name
     if not children and not items:
