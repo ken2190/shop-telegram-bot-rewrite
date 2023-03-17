@@ -122,6 +122,6 @@ echo "TOKEN=token" >> .env
 
 #### Run the bot
 ```bash
-install poetry # install dependencies and create a virtual environment
+poetry install # install dependencies and create a virtual environment
 poetry run python3.10 src/__init__.py # start the bot
 ```
