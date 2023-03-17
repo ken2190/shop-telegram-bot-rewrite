@@ -71,6 +71,21 @@ Ubuntu:
 ```bash
 sudo apt-get install python3.10 python3-pip
 ```
+# Install python3.10 from source
+
+```bash
+sudo apt-get update
+sudo apt-get install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz
+tar -xf Python-3.10.0.tgz
+cd Python-3.10.0
+./configure --enable-optimizations
+make -j $(nproc)
+sudo make altinstall
+rm -r ../Python-3.10.0
+rm Python-3.10.0.tgz
+update-alternatives --install /usr/bin/python python3 /usr/local/bin/python3.10 10
+```
 
 Fedora:
 ```bash
@@ -90,7 +105,8 @@ sudo emerge -av dev-lang/python:3.10 dev-python/pip
 #### Poetry
 Linux/MacOS/Windows(WSL):
 ```bash
-curl -sSL https://install.python-poetry.org | python3 -
+#curl -sSL https://install.python-poetry.org | python3 -
+curl -sSL https://install.python-poetry.org | python3.10 -
 ```
 
 Windows Powershell:
@@ -122,6 +138,8 @@ echo "TOKEN=token" >> .env
 
 #### Run the bot
 ```bash
+python3.10 -m venv venv
+source venv/bin/activate
 poetry install # install dependencies and create a virtual environment
 poetry run python3.10 src/__init__.py # start the bot
 ```
