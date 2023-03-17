@@ -1,70 +1,70 @@
-# WIP
+#WIP
 
-### Roadmap:
-- 🔴 Админ панель
-  * ~~Категории~~
-    - ~~Добавление~~
-    - ~~Изменение~~
-  * ~~Товары~~
-    - ~~Добавление~~ 
-    - ~~Изменение~~
-  * ~~Пользователи~~
-    - ~~Просмотр профиля~~
-    - ~~Изменение ролей~~
-  * Статистика
-  * Настройки
-- ~~🗄️ Каталог~~
-- 🛒 Корзина
-  * ~~Товары~~ 
-  * ~~Доставка~~
-  * Оформление заказа
-- ~~📁 Профиль~~
+###Roadmap:
+- 🔴 Admin Panel
+   * ~~Categories~~
+     - ~~Addition~~
+     - ~~Change~~
+   * ~~Products~~
+     - ~~Addition~~
+     - ~~Change~~
+   * ~~Users~~
+     - ~~View Profile~~
+     - ~~Change roles~~
+   * Statistics
+   * Settings
+- ~~🗄️ Catalog~~
+- 🛒 Shopping Cart
+   * ~~Products~~
+   * ~~Delivery~~
+   * Checkout
+- ~~📁 Profile~~
 - ~~ℹ️ FAQ~~
-- Платежи
-  * Вручную
-  * Telegram API
-  * Qiwi/yoomoney?
+- Payments
+   * Manually
+   * Telegram API
+   * Qiwi/yoomoney?
 - Readme
 
 <hr>
 
-# 🇷🇺Русский
-# Зачем и кому нужен этот бот?
+# 🇬🇧Russian
+# Why and who needs this bot?
 
-Зачастую люди, желающие открыть маленький интернет-бизнес, делают это с помощью профиля в социальных сетях, что требует вручную обрабатывать каждую заявку. Этот бот позволит каждому быстро открыть автоматизированный магазин на базе телеграм бота, что значительно уменьшит время обработки заказов.
+Often, people who want to start a small online business do so through a social media profile, which requires them to manually process each application. This bot will allow everyone to quickly open an automated store based on a telegram bot, which will significantly reduce the order processing time.
 
-# Что есть в боте?
-- Бот поддерживает оплату через платежные системы (Telegram API). 
-- Админ панель для управления магазином
-    - Добавление/изменение/удаление товара
-    - Добавление/изменение/удаление категорий
-    - Просмотр/изменение ролей пользователей
-    - Настройка бота
-    - Статистика по продажам с графиками и возможностью экспорта в Excel.
-- Каталог товаров с категориями и подкатегориями
-- Поиск по каталогу
-- Корзина с возможностью выбора способа доставки и оплаты
-- Личный кабинет с историей заказов
-- FAQ с возможностью изменения вопросов и ответов через админ панель
+# What is in the bot?
+- The bot supports payment via payment systems (Telegram API).
+- Admin panel for store management
+     - Adding/changing/deleting a product
+     - Add/change/delete categories
+     - View/change user roles
+     - Bot setup
+     - Sales statistics with graphs and the ability to export to Excel.
+- Product catalog with categories and subcategories
+- Catalog search
+- Shopping cart with the ability to choose the method of delivery and payment
+- Personal account with order history
+- FAQ with the ability to change questions and answers through the admin panel
 
-# Как установить?
+# How to install?
 
-Бота можно установить двумя способами:
-- [Docker(рекомендуется)](#docker)
-- [Ручная установка](#manual)
+The bot can be installed in two ways:
+- [Docker(recommended)](#docker)
+- [Manual installation](#manual)
 
-## Docker
+##Docker
 
 placeholder
 
-## Manual
-### Установка зависимостей
+##Manual
+### Install dependencies
 
-#### Python 3.10
+####Python 3.10
 
 Windows:
 ```powershell
-scoop install python # или установить с официального сайта
+scoop install python # or install from the official site
 ```
 
 Ubuntu:
@@ -77,7 +77,7 @@ Fedora:
 sudo dnf install python3.10 python3-pip
 ```
 
-Arch:
+arch:
 ```bash
 sudo pacman -S python3.10 python3-pip
 ```
@@ -88,40 +88,40 @@ sudo emerge -av dev-lang/python:3.10 dev-python/pip
 ```
 
 #### Poetry
-Linux/Macos/Windows(WSL):
+Linux/MacOS/Windows(WSL):
 ```bash
-curl -sSL https://install.python-poetry.org | python3 -
+curl -sSL https://install.python-poetry.org | python3-
 ```
 
 Windows Powershell:
 ```powershell
-(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py-
 ```
 
-### Установка бота
+### Bot installation
 
-#### Клонирование репозитория
+#### Clone the repository
 ```bash
 git clone https://github.com/w1png/shop-telegram-bot
 cd shop-telegram-bot
 ```
 
-#### Создание .env файла
+#### Create .env file
 Linux/Macos:
 ```bash
-touch .env
-echo "TOKEN=токен" >> .env
+touch.env
+echo "TOKEN=token" >> .env
 ```
 
 Windows:
 ```powershell
 New-Item -Path .env -ItemType File
 @echo off
-echo "TOKEN=токен" >> .env
+echo "TOKEN=token" >> .env
 ```
 
-#### Запуск бота
-```bash 
-poetry install # установка зависимостей и создание виртуального окружения
-poetry run python3.10 src/__init__.py # запуск бота
+#### Run the bot
+```bash
+install poetry # install dependencies and create a virtual environment
+poetry run python3.10 src/__init__.py # start the bot
 ```
